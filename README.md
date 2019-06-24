@@ -11,5 +11,7 @@ This plugin uses CURL and tested with osTicket v1.10.1
 This fork sends the message of the ticket as well as other info
 Added compability with osTicket v1.10.1.
 
+![Screenshot](https://i.imgur.com/njVSRBW.png)
+
 ## Contribution
 Spacial thanks to [thammanna](https://github.com/thammanna) for inspiration by his osTicket plugin [osticket-slack](https://github.com/thammanna/osticket-slack) written for Slack.
