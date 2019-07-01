@@ -14,12 +14,10 @@ class MattermostPlugin extends Plugin {
             global $ost;
 	    $title = $ticket->getSubject() ?: 'No subject';
             $body = $ticket->getLastMessage()->getMessage() ?: 'No content';
-	    $body = str_replace('<p>', '', $body);
 	    $body = str_replace('</p>', '<br />' , $body);
 	    $breaks = array("<br />","<br>","<br/>");
 	    $body = str_ireplace($breaks, "\n", $body);
-	    $body = preg_replace('/\v(?:[\v\h]+)/', '', $body);
-	    $body = strip_tags($body);	
+	
 
 
             $payload = array(
