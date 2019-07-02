@@ -18,7 +18,7 @@ class MattermostPlugin extends Plugin {
 	    $body = str_replace('</p>', '<br />' , $body);
 	    $breaks = array("<br />","<br>","<br/>");
 	    $body = str_ireplace($breaks, "\n", $body);
-	
+	    $body = strip_tags($body);
 
 
             $payload = array(
