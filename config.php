@@ -12,6 +12,10 @@ class MattermostPluginConfig extends PluginConfig {
                 'label' => 'Webhook URL',
                 'configuration' => array('size'=>100, 'length'=>200),
             )),
+	        'mattermost-notify-to' => new TextboxField(array(
+	        	'label' => 'Notifications string',
+		        'configuration' => array('size'=>100, 'length'=>200),
+	        )),
         );
     }
 }

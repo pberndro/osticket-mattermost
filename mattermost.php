@@ -19,14 +19,15 @@ class MattermostPlugin extends Plugin {
 	    $breaks = array("<br />","<br>","<br/>");
 	    $body = str_ireplace($breaks, "\n", $body);
 	    $body = strip_tags($body);
+        $notify = $this->getConfig()->get('mattermost-notify-to');
 
 
             $payload = array(
                         'attachments' =>
                             array (
                                 array ( 
-                                    'pretext' => "New Ticket <" . $ost->getConfig()->getUrl() . "scp/tickets.php?id=" . $ticket->getId() . "|#" . $ticket->getNumber() . "> created",
-                                    'fallback' => "New Ticket <" . $ost->getConfig()->getUrl() . "scp/tickets.php?id=" . $ticket->getId() . "|#" . $ticket->getNumber() . "> created",
+                                    'pretext' => "New Ticket <" . $ost->getConfig()->getUrl() . "scp/tickets.php?id=" . $ticket->getId() . "|#" . $ticket->getNumber() . "> created, " . $notify . ", pay your attention!",
+                                    'fallback' => "New Ticket <" . $ost->getConfig()->getUrl() . "scp/tickets.php?id=" . $ticket->getId() . "|#" . $ticket->getNumber() . "> created, " . $notify . ", pay your attention!",
                                     'color' => "#D00000",
                                     'fields' => 
                                     array(
