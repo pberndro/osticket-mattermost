@@ -10,11 +10,11 @@ This plugin uses CURL and tested with osTicket v1.10.1 and v1.12
 ## What's new
 
 ### v1.2.0
-- Add notifiation string to config of the plugin.
+- Add notification string to config of the plugin.
 
 ### v1.1.0
 - Add compability with osTicket v1.10+
-- Now plugin can send ticket text
+- The plugin can now send the ticket text as mattermost message
 
 ### v1.0.0
 - Release version
